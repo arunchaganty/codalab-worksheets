@@ -117,7 +117,7 @@ let Bundle = React.createClass({
       if (xhr.status != 404) {
         this.setState({bundleInfo: null, fileContents: null, stdout: null, stderr: null, errorMessages: this.state.errorMessages.concat([xhr.responseText])});
       } else {
-        // if contents aren't available yet, then clear stdout and stderr also. 
+        // If contents aren't available yet, then also clear stdout and stderr. 
         this.setState({fileContents: null, stdout: null, stderr: null});
       }
     });
